@@ -12,6 +12,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
+  constructor(
+    public crudService: CrudService
+  ){}
+
   page: string = 'Página Inicial';
   valor: number = 0;
 
@@ -20,6 +24,15 @@ increment(){
 }
 decrement(){
   this.valor--;
+}
+
+pokemon:any = {
+  nome: null,
+  tipo: null
+};
+
+enviar(){
+  this.crudService.insert(this.pokemon, 'pokemons')
 }
 
 }
