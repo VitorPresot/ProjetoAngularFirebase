@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { RouterLink } from '@angular/router';
+import { increment } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -12,8 +14,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    RouterLink
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+
+}
+
